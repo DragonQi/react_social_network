@@ -6,16 +6,30 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06bae3a0-3503-423f-90ab-8ba08e8d58fb" name="Default Changelist" comment="first commit">
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +37,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GithubPullRequestsUISettings">
@@ -38,8 +57,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -71,6 +92,9 @@
       <workItem from="1611032283412" duration="7000" />
       <workItem from="1611032361835" duration="388000" />
       <workItem from="1611033263106" duration="4609000" />
+      <workItem from="1611067829334" duration="330000" />
+      <workItem from="1611080915131" duration="150000" />
+      <workItem from="1611081078745" duration="1087000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1611033593299</created>
@@ -90,33 +114,54 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1611036783349">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state x="311" y="34" width="1320" height="953" key="CommitChangelistDialog2" timestamp="1611082124490">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="311" y="34" width="1320" height="953" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611082124490" />
+    <state width="1899" height="291" key="GridCell.Tab.0.bottom" timestamp="1611082154264">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1611036783349" />
-    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1611036783348">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1899" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611082154264" />
+    <state width="1899" height="291" key="GridCell.Tab.0.center" timestamp="1611082154264">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1611036783348" />
-    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1611036783348">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1899" height="291" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611082154264" />
+    <state width="1899" height="291" key="GridCell.Tab.0.left" timestamp="1611082154264">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1611036783348" />
-    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1611036783348">
-      <screen x="0" y="0" width="1280" height="680" />
+    <state width="1899" height="291" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611082154264" />
+    <state width="1899" height="291" key="GridCell.Tab.0.right" timestamp="1611082154264">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1611036783348" />
+    <state width="1899" height="291" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611082154264" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1611033877597">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
