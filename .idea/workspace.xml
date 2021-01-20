@@ -27,9 +27,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06bae3a0-3503-423f-90ab-8ba08e8d58fb" name="Default Changelist" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogsItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +63,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Dialogs/Message" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\point\Desktop\WebstormProjects\react_social_network\src\components\Dialogs\Message" />
+      <recent name="C:\Users\point\Desktop\WebstormProjects\react_social_network\src\components\Dialogs\DialogItem" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -95,6 +104,8 @@
       <workItem from="1611067829334" duration="330000" />
       <workItem from="1611080915131" duration="150000" />
       <workItem from="1611081078745" duration="1087000" />
+      <workItem from="1611151047123" duration="14000" />
+      <workItem from="1611161190375" duration="3690000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1611033593299</created>
@@ -142,29 +153,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="311" y="34" width="1320" height="953" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611082124490" />
-    <state width="1899" height="291" key="GridCell.Tab.0.bottom" timestamp="1611082154264">
+    <state width="1899" height="291" key="GridCell.Tab.0.bottom" timestamp="1611161937010">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1611036783349" />
-    <state width="1899" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611082154264" />
-    <state width="1899" height="291" key="GridCell.Tab.0.center" timestamp="1611082154264">
+    <state width="1899" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611161937010" />
+    <state width="1899" height="291" key="GridCell.Tab.0.center" timestamp="1611161937010">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1611036783348" />
-    <state width="1899" height="291" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611082154264" />
-    <state width="1899" height="291" key="GridCell.Tab.0.left" timestamp="1611082154264">
+    <state width="1899" height="291" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611161937010" />
+    <state width="1899" height="291" key="GridCell.Tab.0.left" timestamp="1611161937010">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1611036783348" />
-    <state width="1899" height="291" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611082154264" />
-    <state width="1899" height="291" key="GridCell.Tab.0.right" timestamp="1611082154264">
+    <state width="1899" height="291" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611161937010" />
+    <state width="1899" height="291" key="GridCell.Tab.0.right" timestamp="1611161937010">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1611036783348" />
-    <state width="1899" height="291" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611082154264" />
+    <state width="1899" height="291" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611161937010" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1611033877597">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1611033877597" />
+    <state x="623" y="225" key="search.everywhere.popup" timestamp="1611163856938">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611163856938" />
   </component>
 </project>
