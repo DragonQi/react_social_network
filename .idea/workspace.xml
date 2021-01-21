@@ -6,32 +6,18 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06bae3a0-3503-423f-90ab-8ba08e8d58fb" name="Default Changelist" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/DialogItem/DialogsItem.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Dialogs/Message/Message.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintcache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialogs/Dialogs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/MyPosts/MyPosts.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +51,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/Dialogs/Message" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -106,6 +93,9 @@
       <workItem from="1611081078745" duration="1087000" />
       <workItem from="1611151047123" duration="14000" />
       <workItem from="1611161190375" duration="3690000" />
+      <workItem from="1611206422421" duration="2122000" />
+      <workItem from="1611217927933" duration="1254000" />
+      <workItem from="1611222815607" duration="674000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1611033593299</created>
@@ -153,26 +143,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="311" y="34" width="1320" height="953" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611082124490" />
-    <state width="1899" height="291" key="GridCell.Tab.0.bottom" timestamp="1611161937010">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom" timestamp="1611222892558">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1611036783349" />
+    <state width="1259" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1611222892558" />
     <state width="1899" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611161937010" />
-    <state width="1899" height="291" key="GridCell.Tab.0.center" timestamp="1611161937010">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center" timestamp="1611222892558">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1611036783348" />
+    <state width="1259" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1611222892558" />
     <state width="1899" height="291" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611161937010" />
-    <state width="1899" height="291" key="GridCell.Tab.0.left" timestamp="1611161937010">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left" timestamp="1611222892558">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1611036783348" />
+    <state width="1259" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1611222892558" />
     <state width="1899" height="291" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611161937010" />
-    <state width="1899" height="291" key="GridCell.Tab.0.right" timestamp="1611161937010">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right" timestamp="1611222892558">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1611036783348" />
+    <state width="1259" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1611222892558" />
     <state width="1899" height="291" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611161937010" />
+    <state x="400" y="43" key="RollbackChangesDialog" timestamp="1611206488461">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="400" y="43" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1611206488461" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1611206119358">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1611206119358" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1611033877597">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -181,5 +179,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1611163856938" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Profile/Profile.jsx</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
