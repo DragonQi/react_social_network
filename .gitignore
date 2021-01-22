@@ -8,6 +8,9 @@
 # intellij configs
 .idea/
 
+# ESlint cache
+.eslintcache
+
 # testing
 /coverage
 
