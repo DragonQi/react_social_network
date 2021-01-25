@@ -14,7 +14,7 @@ const App = (props) => {
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
-                <Navbar/>
+                <Navbar state={props.state}/>
                 <div className='app-wrapper-content'>
                     <Route path='/dialogs' render={() => <Dialogs
                         state={props.state.dialogsPage}
@@ -24,6 +24,7 @@ const App = (props) => {
                     <Route path='/news' render={() => <News/>}/>
                     <Route path='/music' render={() => <Music/>}/>
                     <Route path='/settings' render={() => <Settings/>}/>
+
                 </div>
             </div>
         </BrowserRouter>

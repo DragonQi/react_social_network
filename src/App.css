@@ -6,7 +6,7 @@
   "header header"
   "nav content";
     grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 2.5fr 9.5fr;
 }
 
 .app-wrapper-content {
