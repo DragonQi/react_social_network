@@ -20,8 +20,7 @@ const App = (props) => {
                         state={props.state.dialogsPage}/>}/>
                     <Route path='/profile' render={() => <Profile
                         profilePage={props.state.profilePage}
-                        addPost={props.addPost}
-                        updateNewPostText={props.updateNewPostText}
+                        dispatch={props.dispatch}
                     />}/>
                     <Route path='/news' render={() => <News/>}/>
                     <Route path='/music' render={() => <Music/>}/>
@@ -31,6 +30,6 @@ const App = (props) => {
             </div>
         </BrowserRouter>
     );
-}
+};
 
 export default App;
