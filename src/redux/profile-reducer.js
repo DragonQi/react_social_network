@@ -19,19 +19,19 @@ const profileReducer = (state = initialState, action) => {
                 message: state.newPostText,
                 likesCount: 0
             }
-            let stateCopy = {...state};
-            stateCopy.posts = [...state.posts]
-            stateCopy.posts.push(newPost)
-            stateCopy.newPostText = '';
+            return {
+                ...state,
+                posts: [...state.posts, newPost],
+                newPostText: ''
+            };
             //добавление поста
-            return stateCopy;
         }
         case UPDATE_NEW_POST_TEXT: {
-            let stateCopy = {...state};
-            stateCopy.posts = [...state.posts];
-            stateCopy.newPostText = action.newText;
-            //логика набирания текста в textarea поста, с обновлением на каждый символ(временно)
-            return stateCopy;
+            return {
+                ...state,
+                newPostText: action.newText
+            };
+            //логика набирания текста в textarea поста, с обновлением на каждый символ
         }
         default:
             return state;

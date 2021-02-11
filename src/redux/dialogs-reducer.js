@@ -24,15 +24,19 @@ let initialState = {
 const dialogsReducer = (state = initialState, action) => {
     switch (action.type) {
         case UPDATE_NEW_MESSAGE_BODY:
-            state.newMessageBody = action.body;
-            //посимвольное обновление в textarea сообщения
-            return state;
+            return {
+                ...state,
+                newMessageBody: action.body
+            };
+        //посимвольное обновление в textarea сообщения
         case SEND_MESSAGE:
             let body = state.newMessageBody;
-            state.newMessageBody = '';
-            state.messages.push({id: 7, message: body});
-            //пуш содержимого textarea в _state
-            return state;
+            return {
+                ...state,
+                newMessageBody: '',
+                messages: [...state.messages, {id: 7, message: body}]
+            };
+        //пуш содержимого textarea в _state
         default:
             return state;
     }
