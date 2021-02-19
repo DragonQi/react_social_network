@@ -18,13 +18,10 @@ const App = (props) => {
                 <Header/>
                 <Navbar state={props.state}/>
                 <div className='app-wrapper-content'>
-                    <Route path='/dialogs' render={() =>
-                        <DialogsContainer
-                            store={props.store}/>}/>
-                    <Route path='/profile' render={() =>
-                        <ProfileContainer
-                            store={props.store}
-                        />}/>
+                    <Route path='/dialogs'
+                           render={() => <DialogsContainer store={props.store}/>}/>
+                    <Route path='/profile/:userId?'
+                           render={() => <ProfileContainer store={props.store}/>}/>
                     <Route path='/users' render={() => <UsersContainer/>}/>
                     <Route path='/news' render={() => <News/>}/>
                     <Route path='/music' render={() => <Music/>}/>

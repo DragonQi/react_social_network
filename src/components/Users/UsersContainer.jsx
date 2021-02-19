@@ -80,6 +80,7 @@ let mapStateToProps = (state) => {
         }
     }
 };*/
+//оставил как пример, ниже сокращение для удобства
 
 export default connect (mapStateToProps, {
     follow, unfollow,
