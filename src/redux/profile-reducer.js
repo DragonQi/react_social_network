@@ -1,3 +1,6 @@
+import {usersAPI} from "../components/api/api";
+import {setToggleIsFetching, setTotalUsersCount, setUsers} from "./users-reducer";
+
 const ADD_POST = 'ADD_POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE_NEW_POST_TEXT';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
@@ -52,3 +55,11 @@ export const updateNewPostTextCreator = (text) => {
     return {type: UPDATE_NEW_POST_TEXT, newText: text}
 };
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
+
+export const getProfileThunk = (userId) => {
+    return (dispatch) => {
+        usersAPI.getProfile(userId).then(data => {
+            dispatch(setUserProfile(data));
+        })
+    }
+};
