@@ -1,24 +1,31 @@
 import React from 'react';
 
 class ProfileStatus extends React.Component {
+    statusInputRef = React.createRef();
+
     state = {
-        editMode: false
+        editMode: false,
+        status: this.props.status
     }
 
     activateEditMode = () => {
         this.setState( {
             editMode: true
         })//setState асинхронен
-        //this.forceUpdate(); позже почитать
-    }
+    }//this.forceUpdate(); позже почитать
 
     deactivateEditMode = () => {
         this.setState( {
             editMode: false
-        })//setState асинхронен
-        //this.forceUpdate(); позже почитать
+        })
+        this.props.updateUserStatus(this.state.status)
     }
 
+    onStatusChange = (e) => {
+        this.setState({
+            status: e.currentTarget.value
+        })
+    }
 
     render() {
         return (
@@ -30,12 +37,12 @@ class ProfileStatus extends React.Component {
                 }
                 {this.state.editMode &&
                     <div>
-                        <input onBlur={this.deactivateEditMode} value={this.props.status}/>
+                        <input onChange={this.onStatusChange} onBlur={this.deactivateEditMode} value={this.state.status}/>
                     </div>
                 }
             </>
         )
     }
-};
+}
 
 export default ProfileStatus;
