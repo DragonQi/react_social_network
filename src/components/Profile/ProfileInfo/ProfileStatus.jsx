@@ -1,11 +1,13 @@
 import React from 'react';
 
 class ProfileStatus extends React.Component {
-    statusInputRef = React.createRef();
-
     state = {
         editMode: false,
         status: this.props.status
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+
     }
 
     activateEditMode = () => {
@@ -32,7 +34,7 @@ class ProfileStatus extends React.Component {
             <>
                 {!this.state.editMode &&
                     <div>
-                        <span onDoubleClick={this.activateEditMode}>{this.props.status}</span>
+                        <span onDoubleClick={this.activateEditMode}>{this.props.status || "-------"/* временное решение, чтобы не терять статус */}</span>
                     </div>
                 }
                 {this.state.editMode &&
