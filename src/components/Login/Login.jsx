@@ -1,19 +1,12 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form'
 
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
-
-const onSubmit = async values => {
-    await sleep(300)
-    window.alert(JSON.stringify(values, 0, 2))
-}
-
 const Login = (props) => {
     return (
         <>
             <Form
-                onSubmit={onSubmit}
-                render={({ handleSubmit }) => (
+                onSubmit={props.onSubmit}
+                render={({ handleSubmit, values }) => (
                     <form onSubmit={handleSubmit}>
                         <h2>Login Here</h2>
                         <div>
@@ -28,10 +21,10 @@ const Login = (props) => {
                             <Field type={'checkbox'} name={'rememberMe'} component={'input'}/> remember me
                         </div>
                         <button type="submit">Submit</button>
+                        {props.preView(values)}
                     </form>
                 )}
             />
-
         </>
     )
 }
