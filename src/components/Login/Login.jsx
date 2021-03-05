@@ -11,7 +11,7 @@ const Login = (props) => {
                         <h2>Login Here</h2>
                         <div>
                             {/*<label>Login/Email</label>*/}
-                            <Field type={'text'} name={"login"} component={"input"} placeholder={"Login"}/>
+                            <Field type={'text'} name={"email"} component={"input"} placeholder={"Login"}/>
                         </div>
                         <div>
                             {/*<label>Password</label>*/}
@@ -21,7 +21,7 @@ const Login = (props) => {
                             <Field type={'checkbox'} name={'rememberMe'} component={'input'}/> remember me
                         </div>
                         <button type="submit">Submit</button>
-                        {props.preView(values)}
+                        {/*{preViewprops.preView(values)}*/}
                     </form>
                 )}
             />
