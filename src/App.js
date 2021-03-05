@@ -5,7 +5,7 @@ import ProfileContainer from "./components/Profile/ProfileContainer";
 import Music from "./components/Music/Music";
 import News from "./components/News/News";
 import Settings from "./components/Settings/Settings";
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
@@ -15,7 +15,7 @@ import LoginContainer from "./components/Login/LoginContainer";
 
 const App = (props) => {
     return (
-        <BrowserRouter>
+        <HashRouter basename={process.env.PUBLIC_URL}>
             <div className='app-wrapper'>
                 <HeaderContainer/>
                 <Navbar state={props.state}/>
@@ -31,7 +31,7 @@ const App = (props) => {
                     <Route path='/login' render={() => <LoginContainer/>}/>
                 </div>
             </div>
-        </BrowserRouter>
+        </HashRouter>
     );
 };
 
