@@ -1,6 +1,6 @@
 #The project used API from https://social-network.samuraijs.com
 ## For testing, login/password: `free@samuraijs.com` / `free`
-## This project deployed here https://dragonqi-social-network.herokuapp.com/
+## This project deployed here https://dragonqi.github.io/react_social_network/
 
 ## Available Scripts
 
