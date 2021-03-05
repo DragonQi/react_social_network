@@ -15,7 +15,7 @@ import LoginContainer from "./components/Login/LoginContainer";
 
 const App = (props) => {
     return (
-        <HashRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter /*basename={process.env.PUBLIC_URL} HashRouter вместо BrowserRouter использован по причине более удобной настройки gh-pages */>
             <div className='app-wrapper'>
                 <HeaderContainer/>
                 <Navbar state={props.state}/>
