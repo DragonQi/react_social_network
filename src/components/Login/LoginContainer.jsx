@@ -2,15 +2,28 @@ import React from 'react';
 import {connect} from "react-redux";
 import {compose} from "redux";
 import Login from "./Login";
-import {login} from "../../redux/auth-reducer";
+import {login, setAuthUserData} from "../../redux/auth-reducer";
+/*import {authAPI} from "../api/api";
+import {Redirect} from "react-router-dom";*/
 
-const onSubmit = (values) => {login(values)}
-/*const preView = (values) => {
-    return <pre>{JSON.stringify(values, 0, 2)}</pre>}*/
+
+
+const onSubmit = (values) => {
+    login(values.email, values.password, values.rememberMe)
+}
+
+/*const onSubmit = (values) => {
+    login(values.email, values.password, values.rememberMe).then({
+        if (isAuth) {
+            return <Redirect to={'/profile'}/>
+        }
+    })
+}*/
+
 let mapStateToProps = (state) => {
     return {
         onSubmit: onSubmit,
-        /*preView: preView*/
+        isAuth: state.auth.isAuth,
     }
 };
 
