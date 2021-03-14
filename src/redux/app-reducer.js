@@ -1,62 +1,32 @@
 import {authAPI} from "../components/api/api";
 import React from "react";
+import {getAuthUserData} from "./auth-reducer";
 
-const SET_AUTH_USER_DATA = 'SET_AUTH_USER_DATA';
+const INITIALIZED_SUCCESS = 'INITIALIZED_SUCCESS'
 
 let initialState = {
-    userId: null,
-    email: null,
-    login: null,
-    isFetching: false,
-    isAuth: false
+    initialized: false
 };
 
 const appReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_AUTH_USER_DATA:
+        case INITIALIZED_SUCCESS:
             return {
                 ...state,
-                ...action.data
+                initialized: true
             }
         default:
             return state;
     }
 }
 
-export default authReducer;
+export const initializedSuccess = () => ({type: INITIALIZED_SUCCESS});
 
-export const setAuthUserData = (userId, email, login, isAuth) => ({
-    type: SET_AUTH_USER_DATA,
-    data: {userId, email, login, isAuth}})
-
-export const getAuthUserData = () => {
-    return (dispatch) => {
-        authAPI.getAuthMe().then(response => {
-            if (response.data.resultCode === 0) {
-                let {id, email, login} = response.data.data;
-                dispatch(setAuthUserData(id, email, login, true));
-
-            }
-
-        })
-    }
-};
-
-export const login = (email, password, rememberMe) => {
-        authAPI.login(email, password, rememberMe).then(response => (
-            authAPI.getAuthMe().then( response => {
-                if(response.data.resultCode === 0) {
-                    //getAuthUserData() позже реализовать по другому
-                }
-            })
-        ))
-}
-
-export const logout = () => (dispatch) => {
-    authAPI.logout(dispatch).then(response => {
-        if (response.data.resultCode === 0) {
-            dispatch(setAuthUserData(null, null, null, false))
-        }
+export const initializeApp = () => (dispatch) => {
+    let promise = dispatch(getAuthUserData())
+    promise.then(() => {
+        dispatch(initializedSuccess())
     })
 }
 
+export default appReducer;

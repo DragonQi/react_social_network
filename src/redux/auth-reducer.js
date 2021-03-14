@@ -1,5 +1,6 @@
 import {authAPI} from "../components/api/api";
 import React from "react";
+import { Redirect } from "react-router-dom";
 
 const SET_AUTH_USER_DATA = 'SET_AUTH_USER_DATA';
 
@@ -43,13 +44,12 @@ export const getAuthUserData = () => {
 };
 
 export const login = (email, password, rememberMe) => {
-        authAPI.login(email, password, rememberMe).then(response => (
-            authAPI.getAuthMe().then( response => {
-                if(response.data.resultCode === 0) {
-                    //getAuthUserData() позже реализовать по другому
-                }
-            })
-        ))
+    let promise = authAPI.login(email, password, rememberMe)
+    promise.then(response => {
+        if(response.data.resultCode === 0) {
+            return <Redirect to={'/profile'} />
+        }
+    })
 }
 
 export const logout = () => (dispatch) => {

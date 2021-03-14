@@ -12,18 +12,23 @@ import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./components/Login/Login";
 import LoginContainer from "./components/Login/LoginContainer";
 import {connect} from "react-redux";
-import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
-import {getAuthUserData} from "./redux/auth-reducer";
 import { withRouter } from "react-router";
 import {compose} from "redux";
+import {initializeApp} from "./redux/app-reducer";
+import Preloader from "./components/common/Preloader/Preloader";
 
 
 class App extends React.Component {
     componentDidMount() {
-        this.props.getAuthUserData();
+        this.props.initializeApp();
     }
 
     render() {
+
+        if (!this.props.initialized) {
+            return <Preloader/>
+        }
+
         return (
             <HashRouter /*basename={process.env.PUBLIC_URL} HashRouter вместо BrowserRouter использован по причине более удобной настройки на gh-pages */>
                 <div className='app-wrapper'>
@@ -46,6 +51,10 @@ class App extends React.Component {
     }
 }
 
+let mapStateToProps = (state) => ({
+    initialized: state.app.initialized
+})
+
 export default compose(
     withRouter,
-    connect(null, {getAuthUserData} ))(App);
+    connect(mapStateToProps, {initializeApp} ))(App);
