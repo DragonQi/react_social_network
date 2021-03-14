@@ -2,9 +2,7 @@ import React from 'react';
 import {connect} from "react-redux";
 import {compose} from "redux";
 import Login from "./Login";
-import {login, setAuthUserData} from "../../redux/auth-reducer";
-/*import {authAPI} from "../api/api";
-import {Redirect} from "react-router-dom";*/
+import {getAuthUserData, login, setAuthUserData} from "../../redux/auth-reducer";
 
 
 
@@ -20,15 +18,12 @@ const onSubmit = (values) => {
     })
 }*/
 
-let mapStateToProps = (state) => {
-    return {
-        onSubmit: onSubmit,
-        isAuth: state.auth.isAuth,
-    }
-};
+let mapStateToProps = (state) => ({
+        isAuth: state.auth.isAuth
+});
 
 export default compose(
-    connect(mapStateToProps, {}),
+    connect(mapStateToProps, {login, setAuthUserData, getAuthUserData, onSubmit}),
 )(Login);
 
 

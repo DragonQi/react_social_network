@@ -24,12 +24,12 @@ let store = {
                 {id: 6, name: 'Valera'}
             ],
             messages: [
-                {id: 1, message: 'Hi'},
-                {id: 2, message: 'How are you?'},
-                {id: 3, message: 'Yo'},
-                {id: 4, message: 'Yo'},
-                {id: 5, message: 'Yo'},
-                {id: 6, message: 'Yo'}
+                {id: 1, message: '1'},
+                {id: 2, message: '2'},
+                {id: 3, message: '3'},
+                {id: 4, message: '4'},
+                {id: 5, message: '5'},
+                {id: 6, message: '6'}
             ],
             newMessageBody: ''
         },

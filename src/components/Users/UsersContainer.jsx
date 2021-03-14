@@ -10,6 +10,13 @@ import Users from './Users';
 import Preloader from "../common/Preloader/Preloader";
 import {withAuthRedirect} from "../hoc/withAuthRedirect";
 import {compose} from "redux";
+import {
+    getCurrentPage,
+    getFollowingInProgress,
+    getIsFetching,
+    getPageSize,
+    getUsers
+} from "../../redux/users-selectors";
 
 
 class UsersContainer extends React.Component {
@@ -41,38 +48,14 @@ class UsersContainer extends React.Component {
 
 let mapStateToProps = (state) => {
     return {
-        users: state.usersPage.users,
-        pageSize: state.usersPage.pageSize,
-        totalUsersCount: 100 /*state.usersPage.totalUsersCount*/, //принудительное ограничение, в связи с тем что пользователей больше 10 тыс
-        currentPage: state.usersPage.currentPage,
-        isFetching: state.usersPage.isFetching,
-        followingInProgress: state.usersPage.followingInProgress
+        users: getUsers(state),
+        pageSize: getPageSize(state),
+        totalUsersCount: 100 /*getTotalUsersCount(state)*/, //принудительное ограничение, в связи с тем что пользователей больше 10 тыс
+        currentPage: getCurrentPage(state),
+        isFetching: getIsFetching(state),
+        followingInProgress: getFollowingInProgress(state)
     }
 };
-
-/*let mapDispatchToProps = (dispatch) => {
-    return {
-        followApply: (userId) => {
-            dispatch(followCreator(userId));
-        },
-        unfollowApply: (userId) => {
-            dispatch(unfollowCreator(userId));
-        },
-        setUsers: (users) => {
-            dispatch(setUsersCreator(users));
-        },
-        setCurrentPage: (pageNumber) => {
-            dispatch(setCurrentPageCreator(pageNumber))
-        },
-        setTotalUsersCount: (totalCount) => {
-            dispatch(setTotalUsersCountCreator(totalCount))
-        },
-        setToggleIsFetching: (isFetching) => {
-            dispatch(setToggleIsFetchingCreator(isFetching))
-        }
-    }
-};*/
-//оставил как пример, ниже сокращение для удобства
 
 export default compose(
     connect (mapStateToProps, {setCurrentPage, getUsersThunk, followThunk, unfollowThunk}),

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form'
-/*import { Redirect } from "react-router-dom";
-import {authAPI} from "../api/api";*/
+
 
 
 const required = value => (value ? undefined : 'Required');

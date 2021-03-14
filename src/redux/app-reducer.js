@@ -1,4 +1,3 @@
-import {authAPI} from "../components/api/api";
 import React from "react";
 import {getAuthUserData} from "./auth-reducer";
 
