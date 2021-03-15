@@ -1,9 +1,13 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 const ProfileStatusWithHooks = (props) => {
 
     let [editMode, setEditMode] = useState(false);//useState состоит из массива двух значений, непосредственно значения и второе, способа изменения этого значения
     let [status, setStatus] = useState(props.status);
+
+    useEffect(() => {
+        setStatus(props.status);
+    }, [props.status])
 
     const activateEditMode = () => {
         setEditMode(true)
@@ -21,7 +25,7 @@ const ProfileStatusWithHooks = (props) => {
             <>
                 {!editMode &&
                 <div>
-                        <span onDoubleClick={activateEditMode}>{props.status || "-------"/* временное решение, чтобы не терять статус */}</span>
+                        <span onDoubleClick={activateEditMode}>{props.status || "-------"}</span>
                     </div>
                 }
                 {editMode &&
