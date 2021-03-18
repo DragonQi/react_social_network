@@ -15,6 +15,7 @@ import { withRouter } from "react-router";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./components/common/Preloader/Preloader";
+import Login from "./components/Login/Login";
 
 
 class App extends React.Component {
@@ -42,7 +43,7 @@ class App extends React.Component {
                         <Route path='/news' render={() => <News/>}/>
                         <Route path='/music' render={() => <Music/>}/>
                         <Route path='/settings' render={() => <Settings/>}/>
-                        <Route path='/login' render={() => <LoginContainer store={this.props.store}/>}/>
+                        <Route path='/login' render={() => <Login store={this.props.store}/>}/>
                     </div>
                 </div>
             </HashRouter>

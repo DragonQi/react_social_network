@@ -1,60 +1,48 @@
 import React from 'react';
-import { Form, Field } from 'react-final-form'
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import {authAPI} from "../api/api";
 
-
-
-const required = value => (value ? undefined : 'Required');
-
-const Login = (props) => {
-
-    /*const onSubmit = (values) => {
-        authAPI.login(values.email, values.password, values.rememberMe).then(response =>{
-            if(response.data.resultCode === 0) {
-                authAPI.getAuthMe().then(response =>{
-                    if(response.data.resultCode === 0) {
-                        debugger;
-                        setAuthUserData(response.data.data.id, response.data.data.email, response.data.data.login, true)
-                    }
-                })
-            }
-        })
-    }*/
-
-
-    return (
-        <>
-            <Form
-                onSubmit={props.onSubmit}
-                render={({ handleSubmit, form, submitting, pristine, values }) => (
-                    <form onSubmit={handleSubmit}>
-                        <h2>Login Here</h2>
-                        <Field name="email" validate={required}>
-                            {({ input, meta }) => (
-                                <div>
-                                    <input {...input} type="text" placeholder="Email" />
-                                    {meta.error && meta.touched && <span>{meta.error}</span>}
-                                </div>
-                            )}
-                        </Field>
-                        <Field name="password" validate={required}>
-                            {({ input, meta }) => (
-                                <div>
-                                    <input {...input} type="password" placeholder="Password" />
-                                    {meta.error && meta.touched && <span>{meta.error}</span>}
-                                </div>
-                            )}
-                        </Field>
-                        <div>
-                            <Field type={'checkbox'} name={'rememberMe'} component={'input'}/> remember me
-                        </div>
-                        <button type="submit"
-                                /*onClick={form.reset}*/
-                        >Submit</button>
-                    </form>
-                )}
-            />
-        </>
-    )
-}
-
+const Login = () => (
+    <div>
+        {/*<h1>Login Here</h1>*/}
+        <Formik
+            initialValues={{ email: '', password: '' }}
+            validate={values => {
+                const errors = {};
+                if (!values.email) {
+                    errors.email = 'Required';
+                } else if (
+                    !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+                ) {
+                    errors.email = 'Invalid email address';
+                }
+                return errors;
+            }}
+            onSubmit={(values, { setSubmitting }) => {
+                console.log('submit here')
+            }}
+        >
+            {({ isSubmitting }) => (
+                <Form>
+                    Login
+                    <div>
+                        <Field type="email" name="email" />
+                        <ErrorMessage name="email" component="div" />
+                    </div>
+                    Password
+                    <div>
+                        <Field type="password" name="password" />
+                        <ErrorMessage name="password" component="div" />
+                    </div>
+                    <div>
+                        <Field type="checkbox" name="rememberMe" /> remember me
+                    </div>
+                    <button type="submit" disabled={isSubmitting}>
+                        Submit
+                    </button>
+                </Form>
+            )}
+        </Formik>
+    </div>
+);
 export default Login;

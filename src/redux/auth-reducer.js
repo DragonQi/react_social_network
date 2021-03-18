@@ -3,6 +3,8 @@ import React from "react";
 
 const SET_AUTH_USER_DATA = 'SET_AUTH_USER_DATA';
 
+
+
 let initialState = {
     userId: null,
     email: null,
@@ -41,13 +43,15 @@ export const getAuthUserData = () => (dispatch) => {
         })
 }
 
-export const login = (email, password, rememberMe) => {
-    authAPI.login(email, password, rememberMe).then(response => {
-        if (response.data.resultCode === 0) {
-            /*return <Redirect to={'/profile'} />*/
-        }
-    })
-}
+/*export const login = (email, password, rememberMe) => {
+    return (dispatch) => {
+        authAPI.login(email, password, rememberMe).then(response => {
+            if (response.data.resultCode === 0) {
+
+            }
+        })
+    }
+}*/
 
 
 export const logout = () => (dispatch) => {
@@ -57,4 +61,6 @@ export const logout = () => (dispatch) => {
         }
     })
 }
+
+
 

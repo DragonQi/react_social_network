@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import {connect} from "react-redux";
 import {compose} from "redux";
 import Login from "./Login";
@@ -10,13 +10,13 @@ const onSubmit = (values) => {
     login(values.email, values.password, values.rememberMe)
 }
 
-/*const onSubmit = (values) => {
+/!*const onSubmit = (values) => {
     login(values.email, values.password, values.rememberMe).then({
         if (isAuth) {
             return <Redirect to={'/profile'}/>
         }
     })
-}*/
+}*!/
 
 let mapStateToProps = (state) => ({
         isAuth: state.auth.isAuth
@@ -24,7 +24,7 @@ let mapStateToProps = (state) => ({
 
 export default compose(
     connect(mapStateToProps, {login, setAuthUserData, getAuthUserData, onSubmit}),
-)(Login);
+)(Login);*/
 
 
 
