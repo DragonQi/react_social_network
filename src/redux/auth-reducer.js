@@ -37,20 +37,24 @@ export const getAuthUserData = () => (dispatch) => {
             if (response.data.resultCode === 0) {
                 let {id, email, login} = response.data.data;
                 dispatch(setAuthUserData(id, email, login, true));
-
             }
-
         })
 }
 
-/*export const login = (email, password, rememberMe) => {
-    return (dispatch) => {
-        authAPI.login(email, password, rememberMe).then(response => {
-            if (response.data.resultCode === 0) {
+/*export const loginMe = (email, password, rememberMe) => {
+        return (dispatch) => {
+            authAPI.login(email, password, rememberMe).then(response => {
+                if (response.data.resultCode === 0) {
+                    dispatch(getAuthUserData())
+                }
+            })
+        }
+}
 
-            }
-        })
-    }
+export const loginMe = (email, password, rememberMe) => (dispatch) => {
+    return authAPI.login(dispatch).then(response => {
+            console.log(response.data.resultCode)
+    })
 }*/
 
 

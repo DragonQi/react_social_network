@@ -30,13 +30,12 @@ const profileReducer = (state = initialState, action) => {
                 posts: [...state.posts, newPost],
                 newPostText: ''
             };
-            //добавление поста
         }
         case UPDATE_NEW_POST_TEXT: {
             return {
                 ...state,
                 newPostText: action.newText
-            }//логика набирания текста в textarea поста, с обновлением на каждый символ
+            }
         }
         case SET_USER_PROFILE: {
             return {...state, profile: action.profile}

@@ -1,12 +1,19 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import {authAPI} from "../api/api";
+import {getAuthUserData, loginMe} from "../../redux/auth-reducer";
+import {useDispatch} from "react-redux";
+import {Redirect} from "react-router-dom";
 
-const Login = () => (
-    <div>
+
+
+const Login = () => {
+    const dispatch = useDispatch();
+
+    return <div>
         {/*<h1>Login Here</h1>*/}
         <Formik
-            initialValues={{ email: '', password: '' }}
+            initialValues={{email: '', password: ''}}
             validate={values => {
                 const errors = {};
                 if (!values.email) {
@@ -18,31 +25,37 @@ const Login = () => (
                 }
                 return errors;
             }}
-            onSubmit={(values, { setSubmitting }) => {
-                console.log('submit here')
+            onSubmit={(values, {setSubmitting}) => {
+                authAPI.login(values.email, values.password, values.rememberMe)
+                    .then(response => {
+                        if (response.data.resultCode === 0) {
+                            dispatch(getAuthUserData())
+
+                        }
+                    })
             }}
         >
-            {({ isSubmitting }) => (
+            {({isSubmitting}) => (
                 <Form>
                     Login
                     <div>
-                        <Field type="email" name="email" />
-                        <ErrorMessage name="email" component="div" />
+                        <Field type="email" name="email"/>
+                        <ErrorMessage name="email" component="div"/>
                     </div>
                     Password
                     <div>
-                        <Field type="password" name="password" />
-                        <ErrorMessage name="password" component="div" />
+                        <Field type="password" name="password"/>
+                        <ErrorMessage name="password" component="div"/>
                     </div>
                     <div>
-                        <Field type="checkbox" name="rememberMe" /> remember me
+                        <Field type="checkbox" name="rememberMe"/> remember me
                     </div>
-                    <button type="submit" disabled={isSubmitting}>
+                    <button type="submit"> {/*disabled={isSubmitting}*/}
                         Submit
                     </button>
                 </Form>
             )}
         </Formik>
     </div>
-);
+};
 export default Login;
