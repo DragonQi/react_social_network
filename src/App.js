@@ -9,7 +9,6 @@ import {BrowserRouter, HashRouter, Route} from "react-router-dom";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
-import LoginContainer from "./components/Login/LoginContainer";
 import {connect} from "react-redux";
 import { withRouter } from "react-router";
 import {compose} from "redux";
